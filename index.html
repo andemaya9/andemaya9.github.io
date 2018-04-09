@@ -1,38 +1,112 @@
----
-layout: default
-title: Are men talking too much?
----
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Are men talking too much?</title>
+    <meta name="description" content="See who's dominating the conversation">
+    <meta name="author" content="Cathy Deng">
 
-<body>
+    <meta property="og:site_name" content="Are men talking too much?"></meta>
+    <meta property="og:title" content="Are men talking too much?"></meta>
+    <meta property="og:type" content="website"></meta>
+    <meta property="og:description" content="See who's dominating the conversation"></meta>
+    <meta property="og:url" content="http://arementalkingtoomuch.com/"></meta>
+    <meta property="og:image" content="http://arementalkingtoomuch.com/screencap.png"></meta>
+
+    <meta name="twitter:card" content="summary_large_image"></meta>
+    <meta name="twitter:site" content="@cthydng"></meta>
+    <meta name="twitter:creator" content="@cthydng"></meta>
+    <meta name="twitter:description" content="See who's dominating the conversation"></meta>
+    <meta name="twitter:title" content="Are men talking too much?"></meta>
+    <meta name="twitter:url" content="http://arementalkingtoomuch.com/"></meta>
+    <meta name="twitter:image:src" content="http://arementalkingtoomuch.com/screencap.png"></meta>
+
+    <!-- icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="E:\Research Site\icons\icons\apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/icons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/icons/favicon-196x196.png" sizes="2196x196" />
+    <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="296x96" />
+    <link rel="icon" type="image/png" href="/icons/favicon-32x32.png" sizes="232x32" />
+    <link rel="icon" type="image/png" href="/icons/favicon-16x16.png" sizes="216x16" />
+    <link rel="icon" type="image/png" href="/icons/favicon-128.png" sizes="2128x128" />
+    <meta name="application-name" content="Are men talking too much?"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/icons/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/icons/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/icons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/icons/mstile-310x310.png" />
+
+    <!-- Web app manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="E:\Research Site\css\bootstrap.min.css" rel="stylesheet">
+    <link href="E:\Research Site\css\style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="E:\Research Site\js\jquery-3.1.0.slim.min.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46830328-4', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </head>
+
+  <body>
   <div class="alert alert-info alert-ga text-center" role="alert">
     <a href="https://wwu.instructure.com/courses/1147990" class="ga" target="_blank">
       TLA 18-19 Research Study &raquo;
     </a>
+  
   </div>
   <div class="content">
       <div class="row-fluid">
 
-			<p style="text-align:center;"><img src="C:\Users\ander684\Documents\GitHub\andemaya9.github.ioResearch Site\TLA logo better-01.png" alt="TLAlogo" width="100" height="100></p>
-          <div class="col-sm-8 col-sm-offset-2 center">
 
-            <h1>who's talking?</h1>
+            <p style="text-align:center;"><img src="E:\Research Site\TLA logo better-01.png" alt="TLAlogo" width="100" height="100></p>
+            
+            <p id="ans">&nbsp;</p>
+			
+			<div class="col-sm-8 col-sm-offset-2 center">
+
+            <h1>Who's talking?</h1>
             <p id="ans">&nbsp;</p>
 
             <div class="row-fluid" id="button-div">
               <div class="col-xs-6">
-                <a class="btn btn-lg btn-default" id="student">Student</a>
+                <a class="btn btn-lg btn-default" id="student">a student</a>
                 <p id="student-display">00:00</p>
               </div>
               <div class="col-xs-6">
-                <a class="btn btn-lg btn-default" id="other">other</a>
-                <p id="other-display">00:00</p>
+                <a class="btn btn-lg btn-default" id="not-student">not a student</a>
+                <p id="not-student-display">00:00</p>
               </div>
             </div>
             <div class="clearfix"></div>
 
             <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-            <p class="small"><a class="muted-link" href="https://github.com/cathydeng/are-men-talking-too-much">modified with permission from Cathy Deng</a></p>
+            <p class="small"><a class="muted-link" href="https://github.com/cathydeng/are-men-talking-too-much">Modified with permission from Cathy Deng</a></p>
 
 
           </div>
@@ -45,30 +119,32 @@ title: Are men talking too much?
     $(function() {
       'use strict';
 
-      var dude = {
+      var student = {
         time: {
           minutes: 0,
           seconds: 0,
+		  milliseconds: 0,
           hours: 0
         },
         active: false
       };
 
-      var not_dude = {
+      var not_student = {
         time: {
           minutes: 0,
           seconds: 0,
+		  milliseconds: 0,
           hours: 0
         },
         active: false
       };
 
-      var dude_t;
-      var not_dude_t;
+      var student_t;
+      var not_student_t;
 
       var $ans = $('#ans');
-      var $dude = $('#dude');
-      var $not_dude = $('#not-dude');
+      var $student = $('#student');
+      var $not_student = $('#not-student');
 
       function num_pad(num) {
         if (num < 10) {
@@ -95,58 +171,58 @@ title: Are men talking too much?
           $(display_sel).html(num_pad(tally.minutes) + ':' + num_pad(tally.seconds));
         }
 
-        var d_tot = (dude.time.hours * 3600) + (dude.time.minutes * 60) + dude.time.seconds;
-        var l_tot = (not_dude.time.hours * 3600) + (not_dude.time.minutes * 60) + not_dude.time.seconds;
+        var d_tot = (student.time.hours * 3600) + (student.time.minutes * 60) + student.time.seconds;
+        var l_tot = (not_student.time.hours * 3600) + (not_student.time.minutes * 60) + not_student.time.seconds;
         var pct = parseInt(d_tot / (d_tot + l_tot) * 100, 10);
-        $ans.html('<span id="pct">' + pct + '</span>% men');
+        $ans.html('<span id="pct">' + pct + '</span>% student');
       }
 
-      $dude.click(function() {
+      $student.click(function() {
 
-        $dude.toggleClass('pressed');
+        $student.toggleClass('pressed');
 
-        if (dude.active === true) {
-          dude.active = false;
-          clearInterval(dude_t);
+        if (student.active === true) {
+          student.active = false;
+          clearInterval(student_t);
         } else {
-          dude.active = true;
-          if (not_dude.active === true) {
-            $not_dude.toggleClass('pressed');
-            not_dude.active = false;
-            clearInterval(not_dude_t);
+          student.active = true;
+          if (not_student.active === true) {
+            $not_student.toggleClass('pressed');
+            not_student.active = false;
+            clearInterval(not_student_t);
           }
-          dude_t = setInterval(function() {
-            add(dude.time, '#dude-display');
+          student_t = setInterval(function() {
+            add(student.time, '#student-display');
           }, 1000);
         }
 
       });
 
-      $not_dude.click(function() {
+      $not_student.click(function() {
 
-        $not_dude.toggleClass('pressed');
+        $not_student.toggleClass('pressed');
 
-        if (not_dude.active === true) {
-          not_dude.active = false;
-          clearInterval(not_dude_t);
+        if (not_student.active === true) {
+          not_student.active = false;
+          clearInterval(not_student_t);
         } else {
-          not_dude.active = true;
-          if (dude.active === true) {
-            $dude.toggleClass('pressed');
-            dude.active = false;
-            clearInterval(dude_t);
+          not_student.active = true;
+          if (student.active === true) {
+            $student.toggleClass('pressed');
+            student.active = false;
+            clearInterval(student_t);
           }
-          not_dude_t = setInterval(function() {
-            add(not_dude.time, '#not-dude-display');
+          not_student_t = setInterval(function() {
+            add(not_student.time, '#not-student-display');
           }, 1000);
         }
       });
 
       $('body').keydown(function(e) {
         if (e.keyCode === 37) { // left
-          $dude.trigger('click');
+          $student.trigger('click');
         } else if (e.keyCode === 39) { //right
-          $not_dude.trigger('click');
+          $not_student.trigger('click');
         }
       });
 
@@ -154,3 +230,6 @@ title: Are men talking too much?
 
   </script>
 </body>
+
+
+</html>
