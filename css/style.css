@@ -17,7 +17,7 @@ a.muted-link, a.muted-link:active, a.muted-link:hover {
 }
 
 
-#student-display, #not-student-display {
+#student-display, #other-display {
 	font-size: 30px;
 	font-family: "Courier", sans-serif;
 }
