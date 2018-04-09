@@ -22,12 +22,12 @@ title: TLA Research Study
 
             <div class="row-fluid" id="button-div">
               <div class="col-xs-6">
-                <a class="btn btn-lg btn-default" id="dude">student</a>
-                <p id="dude-display">00:00</p>
+                <a class="btn btn-lg btn-default" id="student">student</a>
+                <p id="student-display">00:00</p>
               </div>
               <div class="col-xs-6">
-                <a class="btn btn-lg btn-default" id="not-dude">other</a>
-                <p id="not-dude-display">00:00</p>
+                <a class="btn btn-lg btn-default" id="other">other</a>
+                <p id="other-display">00:00</p>
               </div>
             </div>
             <div class="clearfix"></div>
@@ -46,7 +46,7 @@ title: TLA Research Study
     $(function() {
       'use strict';
 
-      var dude = {
+      var student = {
         time: {
           minutes: 0,
           seconds: 0,
@@ -55,7 +55,7 @@ title: TLA Research Study
         active: false
       };
 
-      var not_dude = {
+      var other = {
         time: {
           minutes: 0,
           seconds: 0,
@@ -64,12 +64,12 @@ title: TLA Research Study
         active: false
       };
 
-      var dude_t;
-      var not_dude_t;
+      var student_t;
+      var other_t;
 
       var $ans = $('#ans');
-      var $dude = $('#dude');
-      var $not_dude = $('#not-dude');
+      var $student = $('#student');
+      var $other = $('#other');
 
       function num_pad(num) {
         if (num < 10) {
@@ -96,58 +96,58 @@ title: TLA Research Study
           $(display_sel).html(num_pad(tally.minutes) + ':' + num_pad(tally.seconds));
         }
 
-        var d_tot = (dude.time.hours * 3600) + (dude.time.minutes * 60) + dude.time.seconds;
-        var l_tot = (not_dude.time.hours * 3600) + (not_dude.time.minutes * 60) + not_dude.time.seconds;
+        var d_tot = (student.time.hours * 3600) + (student.time.minutes * 60) + student.time.seconds;
+        var l_tot = (other.time.hours * 3600) + (other.time.minutes * 60) + other.time.seconds;
         var pct = parseInt(d_tot / (d_tot + l_tot) * 100, 10);
         $ans.html('<span id="pct">' + pct + '</span>% student');
       }
 
-      $dude.click(function() {
+      $student.click(function() {
 
-        $dude.toggleClass('pressed');
+        $student.toggleClass('pressed');
 
-        if (dude.active === true) {
-          dude.active = false;
-          clearInterval(dude_t);
+        if (student.active === true) {
+          student.active = false;
+          clearInterval(student_t);
         } else {
-          dude.active = true;
-          if (not_dude.active === true) {
-            $not_dude.toggleClass('pressed');
-            not_dude.active = false;
-            clearInterval(not_dude_t);
+          student.active = true;
+          if (other.active === true) {
+            $other.toggleClass('pressed');
+            other.active = false;
+            clearInterval(other_t);
           }
-          dude_t = setInterval(function() {
-            add(dude.time, '#dude-display');
+          student_t = setInterval(function() {
+            add(student.time, '#student-display');
           }, 1000);
         }
 
       });
 
-      $not_dude.click(function() {
+      $other.click(function() {
 
-        $not_dude.toggleClass('pressed');
+        $other.toggleClass('pressed');
 
-        if (not_dude.active === true) {
-          not_dude.active = false;
-          clearInterval(not_dude_t);
+        if (other.active === true) {
+          other.active = false;
+          clearInterval(other_t);
         } else {
-          not_dude.active = true;
-          if (dude.active === true) {
-            $dude.toggleClass('pressed');
-            dude.active = false;
-            clearInterval(dude_t);
+          other.active = true;
+          if (student.active === true) {
+            $student.toggleClass('pressed');
+            student.active = false;
+            clearInterval(student_t);
           }
-          not_dude_t = setInterval(function() {
-            add(not_dude.time, '#not-dude-display');
+          other_t = setInterval(function() {
+            add(other.time, '#other-display');
           }, 1000);
         }
       });
 
       $('body').keydown(function(e) {
         if (e.keyCode === 37) { // left
-          $dude.trigger('click');
+          $student.trigger('click');
         } else if (e.keyCode === 39) { //right
-          $not_dude.trigger('click');
+          $other.trigger('click');
         }
       });
 
